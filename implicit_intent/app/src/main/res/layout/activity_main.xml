@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:background="#F5F7FA">
+
+        <!-- App Title -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📱 Implicit Intent Demo"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#1565C0"
+            android:gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp"/>
+
+        <!-- Input Section Title -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Input Details"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#424242"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Phone Number Input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Phone Number"
+            app:startIconDrawable="@android:drawable/stat_sys_phone_call"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="#1565C0"
+            app:hintTextColor="#1565C0"
+            android:layout_marginBottom="16dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:textSize="16sp"
+                android:padding="16dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Message Input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Message (for SMS)"
+            app:startIconDrawable="@android:drawable/ic_dialog_email"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="#1565C0"
+            app:hintTextColor="#1565C0"
+            android:layout_marginBottom="16dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:minLines="3"
+                android:maxLines="5"
+                android:gravity="top|start"
+                android:textSize="16sp"
+                android:padding="16dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- URL Input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Website URL"
+            app:startIconDrawable="@android:drawable/ic_menu_search"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="#1565C0"
+            app:hintTextColor="#1565C0"
+            android:layout_marginBottom="32dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etWebUrl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textUri"
+                android:textSize="16sp"
+                android:padding="16dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Actions Section Title -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Actions"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#424242"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Q1: Call Phone Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCall"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:text="📞 Q1: Call Phone Number"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:backgroundTint="#4CAF50"
+            android:textColor="#FFFFFF"
+            app:cornerRadius="12dp"
+            android:elevation="4dp"
+            android:layout_marginBottom="12dp"
+            app:icon="@android:drawable/stat_sys_phone_call"
+            app:iconGravity="textStart"
+            app:iconTint="#FFFFFF"/>
+
+        <!-- Q2: Send SMS Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnMessage"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:text="💬 Q2: Send SMS Message"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:backgroundTint="#2196F3"
+            android:textColor="#FFFFFF"
+            app:cornerRadius="12dp"
+            android:elevation="4dp"
+            android:layout_marginBottom="12dp"
+            app:icon="@android:drawable/ic_dialog_email"
+            app:iconGravity="textStart"
+            app:iconTint="#FFFFFF"/>
+
+        <!-- Q3: Network Details Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnNetworkDetails"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:text="📡 Q3: Network Details"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:backgroundTint="#FF9800"
+            android:textColor="#FFFFFF"
+            app:cornerRadius="12dp"
+            android:elevation="4dp"
+            android:layout_marginBottom="12dp"
+            app:icon="@android:drawable/ic_menu_manage"
+            app:iconGravity="textStart"
+            app:iconTint="#FFFFFF"/>
+
+        <!-- Q4: Show ListView Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnShowListView"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:text="📋 Q4: Show ListView Details"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:backgroundTint="#9C27B0"
+            android:textColor="#FFFFFF"
+            app:cornerRadius="12dp"
+            android:elevation="4dp"
+            app:icon="@android:drawable/ic_menu_info_details"
+            app:iconGravity="textStart"
+            app:iconTint="#FFFFFF"/>
+
+    </LinearLayout>
+
+</ScrollView>
